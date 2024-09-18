@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\item;
+use App\Models\Item;
 use App\Models\Order;
 use App\Models\Department;
 use App\Models\User;
@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         // Fetch the counts from your respective models
-        $totalProducts = item::count();
+        $totalProducts = Item::count();
         $totalOrders = Order::count();
         $totalDepartments = Department::count();
         $totalUsers = User::count();
