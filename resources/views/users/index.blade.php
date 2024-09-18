@@ -18,7 +18,7 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->department->name }}</td>
+                    <td>{{ $user->department ? $user->department->name : 'No Department' }}</td>
                     <td>
                         <a href="{{ route('users.edit', $user) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('users.destroy', $user) }}" method="POST" style="display:inline;">
