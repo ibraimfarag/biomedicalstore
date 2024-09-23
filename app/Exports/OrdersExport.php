@@ -51,7 +51,7 @@ class OrdersExport implements FromCollection, WithHeadings, WithMapping, WithSty
             $order->qty,
             Carbon::parse($order->date)->format('Y-m-d'), // Ensure it's parsed correctly
             $order->biomed->name, // Assuming biomed is a related user model
-            $order->department->name, // Assuming department is a related model
+            $order->department, // Assuming department is a related model
             $order->reason,
             $order->work_order_number,
             $order->left_in_stock,
