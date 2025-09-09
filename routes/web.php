@@ -84,3 +84,8 @@ Route::middleware(['auth'])->group(function () {
     // Logout
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+
+Route::get('/subscription-ended', function () {
+    return view('subscription-ended');
+})->name('subscription-ended');
